@@ -1,0 +1,13 @@
+C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\bin\Debug\netcoreapp2.1\CarStorage.deps.json
+C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\bin\Debug\netcoreapp2.1\CarStorage.runtimeconfig.json
+C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\bin\Debug\netcoreapp2.1\CarStorage.runtimeconfig.dev.json
+C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\bin\Debug\netcoreapp2.1\CarStorage.dll
+C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\bin\Debug\netcoreapp2.1\CarStorage.pdb
+C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\obj\Debug\netcoreapp2.1\CarStorage.csproj.CoreCompileInputs.cache
+C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\obj\Debug\netcoreapp2.1\CarStorage.RazorAssemblyInfo.cache
+C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\obj\Debug\netcoreapp2.1\CarStorage.RazorAssemblyInfo.cs
+C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\obj\Debug\netcoreapp2.1\CarStorage.AssemblyInfoInputs.cache
+C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\obj\Debug\netcoreapp2.1\CarStorage.AssemblyInfo.cs
+C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\obj\Debug\netcoreapp2.1\CarStorage.RazorTargetAssemblyInfo.cache
+C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\obj\Debug\netcoreapp2.1\CarStorage.dll
+C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\obj\Debug\netcoreapp2.1\CarStorage.pdb
