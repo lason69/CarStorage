@@ -11,3 +11,4 @@ C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\obj\Debug\netcoreapp2.1\
 C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\obj\Debug\netcoreapp2.1\CarStorage.RazorTargetAssemblyInfo.cache
 C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\obj\Debug\netcoreapp2.1\CarStorage.dll
 C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\obj\Debug\netcoreapp2.1\CarStorage.pdb
+C:\Users\Jacek_Lason\source\repos\CarStorage\CarStorage\obj\Debug\netcoreapp2.1\CarStorage.csprojAssemblyReference.cache

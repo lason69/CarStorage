@@ -95,6 +95,10 @@ MIT
 MIT
 MIT
 
+ngx-gallery@5.6.1
+MIT
+MIT
+
 rxjs@6.3.1
 Apache-2.0
 Apache License
