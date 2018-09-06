@@ -78,7 +78,7 @@ var AppComponent = /** @class */ (function () {
     }
     AppComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this._httpService.get('/api/MainPage').subscribe(function (values) {
+        this._httpService.get('/api/HomePage').subscribe(function (values) {
             _this.apiValues = values.json();
             _this.galleryOptions = [
                 {

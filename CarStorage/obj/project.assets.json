@@ -4333,6 +4333,29 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "CarStorageBAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "CarStorageDAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CarStorageBAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CarStorageBAL.dll": {}
+        }
+      },
+      "CarStorageDAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/CarStorageDAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CarStorageDAL.dll": {}
+        }
       }
     }
   },
@@ -11491,10 +11514,21 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "CarStorageBAL/1.0.0": {
+      "type": "project",
+      "path": "../CarStorageBAL/CarStorageBAL.csproj",
+      "msbuildProject": "../CarStorageBAL/CarStorageBAL.csproj"
+    },
+    "CarStorageDAL/1.0.0": {
+      "type": "project",
+      "path": "../CarStorageDAL/CarStorageDAL.csproj",
+      "msbuildProject": "../CarStorageDAL/CarStorageDAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "CarStorageBAL >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Mvc >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0"
@@ -11529,7 +11563,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Jacek_Lason\\source\\repos\\CarStorage\\CarStorageBAL\\CarStorageBAL.csproj": {
+              "projectPath": "C:\\Users\\Jacek_Lason\\source\\repos\\CarStorage\\CarStorageBAL\\CarStorageBAL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
