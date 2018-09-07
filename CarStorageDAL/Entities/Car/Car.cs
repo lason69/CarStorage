@@ -42,6 +42,7 @@ namespace CarStorage.Entities
 			ExType = exType;
 			CylinderStgs = cylinderStgs;
 			VehiclePhotoList = carPhotos;
+
 		}
 	}
 }
