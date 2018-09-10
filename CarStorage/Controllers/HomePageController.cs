@@ -11,18 +11,18 @@ namespace CarStorage
   public class HomePageController : Controller
   {
     private readonly IConfiguration _configuration;
-    private static IVehicle _iVehicle;
+    private static ICarBusinessLogic _iCarBusinessLogic;
 
     public HomePageController(IConfiguration config)
     {
-      this._configuration = config;
-      _iVehicle = new Vehicle(_configuration["CarStorageDBConnectionString"]);
+      _configuration = config;
+      _iCarBusinessLogic = new CarBusinessLogic(_configuration["CarStorageDBConnectionString"]);
     }
 
     [HttpGet]
     public IEnumerable<Car> GetMainPageCars()
     {
-      return _iVehicle.GetMainPageCars();
+      return _iCarBusinessLogic.GetMainPageCars();
     }
   }
 }

@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-using CarStorageDAL.Entities.Vehicle;
+﻿using CarStorageDAL.Entities.Vehicle;
 
 namespace CarStorage.Entities
 {
 	public class Car : Vehicle
 	{
-		public int CarID { get; set; }
 		public ExteriorType ExType { get; set; }
 		public CylinderSettingType CylinderStgs { get; set; }
 		public enum ExteriorType
@@ -35,14 +33,10 @@ namespace CarStorage.Entities
 			W8,
 		}
 
-		public Car(int vehicleID, int carID, ExteriorType exType, CylinderSettingType cylinderStgs, List<VehiclePhoto> carPhotos)
+		public Car(int vehicleID, int ownerID)
 		{
-			this.VehicleID = vehicleID;
-			CarID = carID;
-			ExType = exType;
-			CylinderStgs = cylinderStgs;
-			VehiclePhotoList = carPhotos;
-
+			VehicleID = vehicleID;
+			OwnerID = ownerID;
 		}
 	}
 }

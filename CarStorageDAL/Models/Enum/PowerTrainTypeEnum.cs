@@ -3,5 +3,5 @@
 	RWD,
 	AWD,
 	FWD,
-	RWD+FWD
+	RWDFWD
 }

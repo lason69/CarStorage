@@ -13,7 +13,7 @@ namespace CarStorageDAL.Entities.Vehicle
 		public int OwnerInARow { get; set; }
 		public Color VehicleColor { get; set; }
 		public string OriginCountry { get; set; }
-		public List<AdditionalEquipment> AdditionalEquipment { get; set; }
+		public List<AdditionalEquipmentEnum> AdditionalEquipment { get; set; }
 		public OwnerType OwnerT { get; set; }
 		public VehicleStatus VehicleStat { get; set; }
 	}
