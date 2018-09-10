@@ -9,7 +9,6 @@ public class BaseRepository<TEntity> where TEntity : class
 	{
 		_connection = new SqlConnection(connectionString);
 	}
-
 	public virtual TEntity PopulateRecord(SqlDataReader reader)
 	{
 		return null;
