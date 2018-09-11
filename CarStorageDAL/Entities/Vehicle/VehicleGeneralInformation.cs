@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using CarStorageDAL.Entities.Enum;
 
 namespace CarStorageDAL.Entities.Vehicle
 {

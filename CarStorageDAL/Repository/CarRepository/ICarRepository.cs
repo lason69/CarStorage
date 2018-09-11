@@ -3,6 +3,6 @@ using CarStorage.Entities;
 
 public interface ICarRepository
 {
-	IEnumerable<Car> GetMainPageCars();
-	Car Get(int id);
+	IEnumerable<Car> GetCar();
+	Car FindCarById(int id);
 }

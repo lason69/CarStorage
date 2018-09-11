@@ -1,5 +1,5 @@
-using System.IO;
-using ConnectionStringsSpace;
+using CarStorageBAL;
+using Connections;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -9,7 +9,7 @@ namespace CarStorage
 {
   public class Startup
   {
-    public IConfigurationRoot Configuration { get; set; }
+    public IConfigurationRoot Configuration { get; }
 
 
     // This method gets called by the runtime. Use this method to add services to the container.
@@ -19,7 +19,10 @@ namespace CarStorage
       services.AddMvc();
       services.AddOptions();
       services.Configure<ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
+      services.AddTransient<ICarService, CarService>();
+
     }
+
     public Startup(IHostingEnvironment env)
     {
       var builder = new ConfigurationBuilder()
@@ -31,20 +34,28 @@ namespace CarStorage
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
-      app.Use(async (context, next) =>
+      //app.Use(async (context, next) =>
+      //{
+      //  await next();
+      //  if (context.Response.StatusCode == 404 &&
+      //     !Path.HasExtension(context.Request.Path.Value) &&
+      //     !context.Request.Path.Value.StartsWith("/api/"))
+      //  {
+      //    context.Request.Path = "/index.html";
+      //    await next();
+      //  }
+      //});
+      app.UseMvc(routes =>
       {
-        await next();
-        if (context.Response.StatusCode == 404 &&
-           !Path.HasExtension(context.Request.Path.Value) &&
-           !context.Request.Path.Value.StartsWith("/api/"))
-        {
-          context.Request.Path = "/index.html";
-          await next();
-        }
+        //routes.MapRoute(name: "default", template: "{controller=car}/{action=GetCarList}");
+        routes.MapRoute(
+    "Default", // Route name
+    "{controller}/{action}/{id}", // URL with parameters
+    new { controller = "Car", action = "GetCarList" } // Parameter defaults
+);
       });
       app.UseMvcWithDefaultRoute();
-      app.UseDefaultFiles();
-      app.UseStaticFiles();
+
     }
   }
 }
