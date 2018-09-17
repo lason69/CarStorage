@@ -5,7 +5,7 @@ namespace CarStorageBAL
 {
 	public interface ICarService
 	{
-		IEnumerable<Car> GetCarList();
+		List<Car> GetCarList();
 		Car FindCarById(int id);
 	}
 }

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace CarStorage
 {
@@ -20,6 +21,11 @@ namespace CarStorage
       services.AddOptions();
       services.Configure<ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
       services.AddTransient<ICarService, CarService>();
+      services.AddSwaggerGen(c =>
+      {
+        c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+
+      });
 
     }
 
@@ -45,15 +51,21 @@ namespace CarStorage
           await next();
         }
       });
-
+      app.UseDeveloperExceptionPage();
       app.UseMvc(routes =>
       {
         routes.MapRoute(
-name: "default_route",
-template: "{controller}/{action}/{id?}",
-defaults: new { controller = "Car", action = "Get" }
-);
+                        name: "default_route",
+                        template: "{controller}/{action}/{id?}",
+                        defaults: new { controller = "Car", action = "Get" }
+                        );
       });
+      app.UseSwagger();
+      app.UseSwaggerUI(options =>
+      {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "My API");
+      });
+
       app.UseMvcWithDefaultRoute();
 
     }

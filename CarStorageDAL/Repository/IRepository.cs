@@ -4,7 +4,7 @@ namespace CarStorageDAL.Repository
 {
 	public interface IRepository<TEntity> where TEntity : class
 	{
-		IEnumerable<TEntity> Get();
+		List<TEntity> Get();
 		TEntity FindById(int id);
 
 	}

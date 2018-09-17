@@ -12,12 +12,11 @@ namespace CarStorage.DataLayer
 		{
 			_connection = new SqlConnection(connectionString);
 		}
-
 		private Car PopulateRecord(SqlDataReader reader)
 		{
 			return new Car(reader.GetInt32(0), reader.GetInt32(2));
 		}
-		public IEnumerable<Car> Get()
+		public List<Car> Get()
 		{
 			var command = new SqlCommand("dbo.GetLatestCars");
 

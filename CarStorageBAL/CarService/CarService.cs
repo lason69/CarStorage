@@ -18,7 +18,7 @@ namespace CarStorageBAL
 
 			_carRepository = new CarRepository(_dbConnectionStrings.CarStorageDBConnectionString);
 		}
-		public IEnumerable<Car> GetCarList()
+		public List<Car> GetCarList()
 		{
 			return _carRepository.Get();
 		}

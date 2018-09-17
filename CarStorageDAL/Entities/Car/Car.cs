@@ -7,7 +7,9 @@ namespace CarStorage.Entities
 	{
 		public ExteriorType ExType { get; set; }
 		public CylinderSettingType CylinderStgs { get; set; }
-
+		public Car()
+		{
+		}
 		public Car(int vehicleID, int ownerID)
 		{
 			VehicleID = vehicleID;
