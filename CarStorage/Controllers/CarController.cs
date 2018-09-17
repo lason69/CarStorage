@@ -15,8 +15,8 @@ namespace CarStorage.Controllers
       _carService = carService;
     }
 
-    [HttpGet("GetCarList")]
-    public IEnumerable<Car> GetCarList()
+    [HttpGet]
+    public IEnumerable<Car> Get()
     {
       return _carService.GetCarList();
     }

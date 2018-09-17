@@ -34,24 +34,24 @@ namespace CarStorage
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
-      //app.Use(async (context, next) =>
-      //{
-      //  await next();
-      //  if (context.Response.StatusCode == 404 &&
-      //     !Path.HasExtension(context.Request.Path.Value) &&
-      //     !context.Request.Path.Value.StartsWith("/api/"))
-      //  {
-      //    context.Request.Path = "/index.html";
-      //    await next();
-      //  }
-      //});
+      app.Use(async (context, next) =>
+      {
+        await next();
+        if (context.Response.StatusCode == 404 &&
+           !System.IO.Path.HasExtension(context.Request.Path.Value) &&
+           !context.Request.Path.Value.StartsWith("/api/"))
+        {
+          context.Request.Path = "/index.html";
+          await next();
+        }
+      });
+
       app.UseMvc(routes =>
       {
-        //routes.MapRoute(name: "default", template: "{controller=car}/{action=GetCarList}");
         routes.MapRoute(
-    "Default", // Route name
-    "{controller}/{action}/{id}", // URL with parameters
-    new { controller = "Car", action = "GetCarList" } // Parameter defaults
+name: "default_route",
+template: "{controller}/{action}/{id?}",
+defaults: new { controller = "Car", action = "Get" }
 );
       });
       app.UseMvcWithDefaultRoute();

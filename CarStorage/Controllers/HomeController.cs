@@ -1,13 +1,13 @@
-using Microsoft.AspNetCore.Mvc;
+//using Microsoft.AspNetCore.Mvc;
 
-namespace CarStorage.Controllers
-{
-  public class HomeController : Controller
-  {
-    public HomeController()
-    {
+//namespace CarStorage.Controllers
+//{
+//  public class HomeController : Controller
+//  {
+//    public HomeController()
+//    {
 
-    }
+//    }
 
-  }
-}
+//  }
+//}
